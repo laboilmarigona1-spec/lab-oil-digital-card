@@ -35,7 +35,7 @@
 </div>
 <script>
 const card="15000916";
-const url=location.origin+"/c/"+card;
+const url=location.origin+location.pathname+"?card="+encodeURIComponent(card);
 new QRCode(document.getElementById("qrcode"),{text:url,width:190,height:190,colorDark:"#061a4d",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});
 </script>
 </body></html>
